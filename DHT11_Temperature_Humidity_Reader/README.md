@@ -1,4 +1,5 @@
 Arduino: DHT11 Sensor Reading
+
 This project demonstrates how to read temperature and humidity data from a DHT11 sensor using an Arduino board and display the values on the serial monitor.
 
 Components Required
