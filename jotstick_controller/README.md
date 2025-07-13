@@ -20,18 +20,19 @@ Hardware Required
 
 
 Connect the joystick module to the Arduino as follows:
-Joystick Pin     Arduino Pin      Description
-----------------------------------------------
-+5V            5V             Power supply for the joystick.
-GND            GND            Ground connection.
-VRx            A0(Analog)     Reads the X-axis position.
-VRy            A1(Analog)     Reads the Y-axis position.
-SW             7(Digital)     Reads the button state.
+## Wiring Diagram
 
+| Joystick Pin | Arduino Pin | Description                    |
+|--------------|-------------|--------------------------------|
+| `+5V`        | `5V`        | Power supply for the joystick. |
+| `GND`        | `GND`       | Ground connection.             |
+| `VRx`        | `A0`        | Reads the X-axis position.     |
+| `VRy`        | `A1`        | Reads the Y-axis position.     |
+| `SW`         | `7`         | Reads the button state.        |
+
+*Note: The `SW` pin is configured with an internal pull-up resistor in the code, so you do not need an external resistor for the button.*
 	
 
-
-Note: The SW pin is configured with an internal pull-up resistor in the code, so you do not need an external resistor for the button.
 
 How to Use
 
