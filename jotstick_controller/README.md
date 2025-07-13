@@ -1,4 +1,4 @@
-Arduino Joystick Controller
+Arduino: Joystick Controller
 
 A simple Arduino sketch to read the values from a two-axis joystick with a push-button. This project provides a basic example of how to interface a standard analog joystick module with an Arduino board and monitor its output via the Serial Monitor.
 
