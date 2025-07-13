@@ -1,0 +1,35 @@
+const int trigPin = 9;      // Trigger pin of HC-SR04
+const int echoPin = 8;      // Echo pin of HC-SR04
+const int buzzerPin = 7;    // Buzzer connected to digital pin 7
+
+void setup() {
+  Serial.begin(9600);               
+  pinMode(trigPin, OUTPUT);         
+  pinMode(echoPin, INPUT);         
+  pinMode(buzzerPin, OUTPUT);       
+}
+
+void loop() {
+  long duration, distance;
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH);
+
+  distance = (duration / 2) / 29.1;
+
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  if (distance > 0 && distance <= 20) {
+    digitalWrite(buzzerPin, HIGH);  
+  } else {
+    digitalWrite(buzzerPin, LOW);   
+  }
+
+  delay(500);  
+}
